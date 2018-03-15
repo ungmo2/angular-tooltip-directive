@@ -61,10 +61,6 @@ export class TooltipDirective {
     // tooltip 요소의 사이즈와 위치 정보
     const tooltipPos = this.tooltip.getBoundingClientRect();
 
-    // tooltip 요소의 위치 결정
-    // const top = hostPos.top - tooltipPos.height - this.offset;
-    // const left = hostPos.left - (tooltipPos.width - hostPos.width) / 2;
-
     let top, left;
 
     if (this.placement === 'top') {
