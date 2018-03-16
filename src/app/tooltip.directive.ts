@@ -65,16 +65,16 @@ export class TooltipDirective {
 
     if (this.placement === 'top') {
       top = hostPos.top - tooltipPos.height - this.offset;
-      left = hostPos.left - (tooltipPos.width - hostPos.width) / 2;
+      left = hostPos.left + (hostPos.height - tooltipPos.height) / 2;
     }
 
     if (this.placement === 'bottom') {
       top = hostPos.bottom + this.offset;
-      left = hostPos.left - (tooltipPos.width - hostPos.width) / 2;
+      left = hostPos.left + (hostPos.height - tooltipPos.height) / 2;
     }
 
     if (this.placement === 'left') {
-      top = hostPos.top - (tooltipPos.height - hostPos.height) / 2;
+      top = hostPos.top + (hostPos.height - tooltipPos.height) / 2;
       left = hostPos.left - tooltipPos.width - this.offset;
     }
 
