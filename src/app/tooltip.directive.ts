@@ -7,7 +7,7 @@ export class TooltipDirective {
   @Input('tooltip') tooltipTitle: string;
   @Input() placement: string;
   @Input() delay: string;
-  tooltip: any;
+  tooltip: HTMLElement;
   offset = 10;
 
   constructor(private el: ElementRef, private renderer: Renderer2) { }
